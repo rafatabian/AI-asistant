@@ -44,7 +44,7 @@ const App = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:8000/completions',options)
+            const response = await fetch('https://asistent-45fb86b712b9.herokuapp.com/completions',options)
             const data = await response.json()
             setMessage(data.choices[0].message)
             setSwitc(false)
