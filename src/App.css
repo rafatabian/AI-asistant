@@ -1,38 +1,156 @@
-.App {
-  text-align: center;
+.chatGpt_main_container{
+    background: linear-gradient(54deg, rgba(52, 53, 65, 1) 84%, rgba(173, 164, 95, 1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.sidebar{
+   background: linear-gradient(90deg, rgba(32, 33, 35, 1) 99%, rgba(238, 226, 130, 1) 100%);
+    height: 100vh;
+    width: 244px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebar > button{
+    border:solid 0.5px #FFF;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+.sidebar > nav{
+    border-top: solid 0.5px #ffffffc8;
+    padding: 10px;
+    margin: 10px;
+}
+.history{
+    margin: 10px;
+    padding: 10px;
+    height: 100%;
+}
+.history > li{
+    list-style: none;
+    padding: 15px 0;
+    cursor: pointer;
+}
+.main{
+    height: 100vh;
+    width:100%;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.bottom-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input_container{
+     position: relative;
+    width: 100%;
+    max-width: 650px;
+}
+.input_container > input{
+    width: 100%;
+    font-size: 17px;
+    border: none;
+    background-color: #ffffff12;
+    padding: 12px 45px 12px 15px ;
+    border-radius: 9px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.087);
+}
+.input_container > input:focus{
+    outline:none;
+}
+.input_container > input::placeholder{
+    font-size: 15px;
+}
+.info{
+    color: #ffffff80;
+    font-size: 11px;
+    padding: 10px;
+}
+#submit {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 22px;
+    bottom:19px;
+    right: 15px;
+    cursor: pointer;
+    color:#ffffff5d;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.fa-solid,.fa-spinner,.fa-spin-pulse,.fa-lg{
+    position: absolute;
+    bottom:23px;
+    right:13px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.feed{
+    overflow: scroll;
+    width: 90%;
+    padding: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.feed::-webkit-scrollbar{
+    display: none;
 }
-
-.App-link {
-  color: #61dafb;
+.feed li{
+    display: flex;
+    background-color: #444754;
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.087);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.feed p{
+     color:#ffffffcf
+}
+.role{
+    margin: 0 10px;
+    border-bottom:solid 0.5px #ffffff5d;
+    height: 100%;
+}
+.img_container{
+    width:50%;
+    max-width: 650px;
+    height:70%;
+    max-height: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+.img_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.img_container span{
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width: 1020px){
+    .img_container{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 450px){
+    .sidebar{
+        display: none;
+    }
+    .input_container{
+        width: 90%;
+    }
+    .img_container{
+        max-height: 350px;
+    }
 }
